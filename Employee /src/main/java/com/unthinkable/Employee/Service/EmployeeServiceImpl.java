@@ -27,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     @Override
     public ResponseTemplate getUserWithDepartment(long id) {
         Employee employee = employeeRepository.findById(id).get();
-        Department department = restTemplate.getForObject("http://localhost:8001/department/" + employee.getDepartmentId(),Department.class);
+        Department department = restTemplate.getForObject("http://DEPARTMENTSERVICE/department/" + employee.getDepartmentId(),Department.class);
         ResponseTemplate responseTemplate = ResponseTemplate.builder()
                                             .employee(employee)
                                             .department(department)
