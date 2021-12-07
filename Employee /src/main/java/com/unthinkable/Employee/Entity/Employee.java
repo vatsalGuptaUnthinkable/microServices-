@@ -17,5 +17,5 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long employeeId;
     private String employeeName;
-    private long departmentId;
+    private Long departmentId;
 }

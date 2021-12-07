@@ -25,6 +25,4 @@ public class DepartmentController {
         log.info("Inside find Department By Id method of controller");
         return departmentService.findDepartmentById(id);
     }
-     
-
 }
